@@ -91,6 +91,7 @@ class Task(torch.nn.Module, metaclass=ABCMeta):
         path : str
             path to load from
         """
+        print(path)
         logger.info("Restoring {} for modality {} from {}".format(self.name, m, path))
 
         checkpoint = torch.load(path)
